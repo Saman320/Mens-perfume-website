@@ -1,0 +1,101 @@
+/* Container and base styling */
+.footer-container {
+    background: linear-gradient(to right, rgb(9, 6, 6), #282728);
+    padding: 20px 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between; /* Horizontally space items */
+    align-items: center;
+    color: #f0f0f0;
+    max-width: 1200px;
+    width: 100%;
+    padding: 20px;
+    position: relative;
+  }
+  
+  /* Logo and title styling */
+  .footer-logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .footer-image {
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .footer-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 10px;
+    font-family: 'Playfair Display', serif;
+    color: whitesmoke; /* Perfume theme color */
+  }
+  
+  /* Social media icons */
+  .footer-social-links {
+    font-size: 25px;
+    display: flex;
+    gap: 15px;
+    margin-left: auto; /* Push social links to the right */
+  }
+  
+  .footer-icon {
+    font-size: 30px;
+    color: #f0f0f0;
+    transition: color 0.3s ease;
+  }
+  
+  .facebook:hover {
+    color: rgb(59, 59, 225); /* Highlight color */
+  }
+
+  .instagram:hover {
+    color: rgb(139, 11, 66);
+  }
+
+  .linkedin:hover {
+    color: rgb(49, 49, 152); /* Highlight color */
+  }
+
+  .youtube:hover {
+    color: red; /* Highlight color */
+  }
+  
+  /* Copyright text */
+  .footer-copyright {
+    font-size: 14px;
+    color: #a0a0a0;
+    margin-left: 15px;
+  }
+  
+  /* Responsive footer styling */
+  @media screen and (max-width: 768px) {
+    .footer-content {
+      flex-direction: column; /* Stack items vertically */
+      align-items: center;    /* Center align items */
+      text-align: center;     /* Center align text */
+    }
+  
+    .footer-social-links {
+      margin-top: 15px; /* Space between copyright and social links */
+      margin-left: 15px;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .footer-title {
+      font-size: 20px;
+    }
+  
+    .footer-icon {
+      font-size: 26px;
+    }
+  }
+  

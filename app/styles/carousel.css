@@ -1,0 +1,32 @@
+
+.marquee {
+    overflow: hidden;
+    white-space: nowrap; /* Prevents items from wrapping to the next line */
+    width: 100%; /* Full width */
+    background-color: rgb(25, 24, 24);
+  }
+  
+  .marquee-content {
+    display: inline-block;
+    animation: marquee 15s linear infinite; /* Animation for continuous scrolling */
+    background-color: rgb(25, 24, 24);
+  }
+  
+  .carousel-item {
+    display: inline-block;
+    margin: 0 10px; /* Space between images */
+    background-color: rgb(25, 24, 24);
+  
+  }
+  
+  @keyframes marquee {
+    from {
+        transform: translateX(0); /* Start from 0 */
+    }
+    to {
+        transform: translateX(-50%); /* Move to left, considering the duplicated items */
+    }
+  }
+  
+  
+  

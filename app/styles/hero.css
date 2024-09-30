@@ -1,0 +1,97 @@
+.hero-section {
+  position: relative;
+  color: white; /* Adjust text color as needed */
+}
+
+.background-image {
+  background-image: url("/assets/picture/bg3.jpg");
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover; /* Ensure the background covers the section */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* Prevent background repeat */
+  z-index: 1; /* Ensure it's behind text content */
+}
+
+.container {
+  position: relative;
+  z-index: 2; /* Ensure text is above the background image */
+  display: flex;
+  flex-direction: row; /* Arrange items in a row */
+  align-items: center; /* Center align the items vertically */
+  padding: 50px;
+}
+
+.text-content {
+  text-align: left; /* Align text to the left */
+  flex: 1; /* Allow the text content to grow */
+}
+
+.hero-title {
+  font-size: 3rem; /* Adjust font size as needed */
+  margin: 20px 0; /* Add vertical margin */
+  font-family: 'Playfair Display', serif;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem; /* Adjust font size as needed */
+  margin-bottom: 30px; /* Add space below subtitle */
+}
+
+.button-container {
+  margin-top: 20px;
+}
+
+.hero-button {
+  background: linear-gradient(to right, rgb(9, 6, 6), #282728);
+  box-shadow: 0 4px 10px rgba(244, 242, 242, 0.2); 
+  color: white;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 20px;
+}
+
+.hero-button:hover {
+  background: rgb(57, 54, 54);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .container {
+      padding: 20px; /* Reduce padding on smaller screens */
+      flex-direction: column; /* Stack items in a column for smaller screens */
+      align-items: center; /* Center align items in column layout */
+  }
+
+  .hero-title {
+      font-size: 2.5rem; /* Adjust font size for smaller screens */
+  }
+
+  .hero-subtitle {
+      font-size: 1.25rem; /* Adjust font size for smaller screens */
+  }
+
+  .hero-button {
+      padding: 10px 20px; /* Adjust button padding */
+      font-size: 0.9rem; /* Adjust button font size */
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+      font-size: 2rem; /* Further adjust font size */
+  }
+
+  .hero-subtitle {
+      font-size: 1rem; /* Further adjust subtitle size */
+  }
+}

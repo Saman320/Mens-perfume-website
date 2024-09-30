@@ -1,0 +1,144 @@
+.contact-section {
+    position: relative;
+    text-align: center;
+    background-image: url("/assets/picture/bg3.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 5rem 2rem;
+    color:  rgb(27, 26, 26);
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 1rem; /* Ensure some padding */
+}
+
+.heading {
+    margin-bottom: 2rem;
+}
+
+.contact-title {
+    font-size: 3rem;
+    font-family: 'Playfair Display', serif;
+    color: whitesmoke; 
+    font-family: 'Playfair Display', serif;
+}
+
+.contact-description {
+    font-size: 1.2rem;
+    color: whitesmoke; 
+    font-family: 'Playfair Display', serif;
+}
+
+.contact-content {
+    display: flex;
+    justify-content: space-between; /* Align children horizontally */
+    gap: 2rem; /* Space between form and info */
+}
+
+.contact-form,
+.contact-info {
+    background: rgba(255, 255, 255, 0.1); /* Transparent background */
+    border-radius: 10px;
+    padding: 2rem;
+    width: 100%;
+    max-width: 500px; /* Fixed max width for both */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    font-family: 'Playfair Display', serif;
+    border: 2px solid rgb(27, 26, 26);
+}
+
+.contact-form {
+    backdrop-filter: blur(0px); }
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-label {
+    display: block;
+    font-weight: bold;
+    color: whitesmoke;
+    margin-bottom: 0.5rem;
+}
+
+.form-input,
+.form-textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 2px  rgb(27, 26, 26);
+    border-radius: 5px;
+    transition: border-color 0.3s;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+    border-color: rgb(27, 26, 26);
+    outline: none;
+}
+
+.form-textarea {
+    height: 150px; /* Adjust as needed */
+}
+
+.button-container {
+    text-align: center;
+}
+
+.submit-button {
+    background: linear-gradient(to right, rgb(9, 6, 6), #282728);
+    box-shadow: 0 4px 10px rgba(244, 242, 242, 0.2);
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.submit-button:hover {
+    background: rgb(57, 54, 54);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.info-title {
+    font-size: 1.5rem;
+    color:whitesmoke;
+    margin-bottom: 1rem;
+}
+p {
+    color: whitesmoke;
+}
+
+.availability {
+    margin-top: 1rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .contact-title {
+        font-size: 2.5rem; /* Smaller title on mobile */
+    }
+
+    .contact-description {
+        font-size: 1rem; /* Smaller description on mobile */
+    }
+
+    .contact-content {
+        flex-direction: column; /* Stack on small screens */
+        align-items: center; /* Center align */
+    }
+
+    .contact-form,
+    .contact-info {
+        max-width: 100%; /* Full width on small screens */
+    
+    }
+    .info-title,
+    p {
+        color: whitesmoke;
+        
+    }
+}

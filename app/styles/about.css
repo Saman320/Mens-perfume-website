@@ -1,0 +1,116 @@
+.about-section {
+  position: relative;
+  text-align: center;
+  background-image: url("/assets/picture/bg3.jpg");
+  background-size: cover; /* Ensure background covers entire section */
+  background-position: center; /* Center the background image */
+  padding: 5rem 2rem;
+  color: whitesmoke; /* Text color */
+  min-height: 100vh; /* Ensure it takes up at least the full height of the viewport */
+}
+
+.container {
+  position: relative;
+  z-index: 10;
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-direction: row; /* Place text and image side by side */
+  align-items: center;
+  justify-content: space-between; /* Space between text and image */
+  gap: 4rem; /* Gap between text and image */
+  padding: 0 20px; /* Add padding to the sides */
+}
+
+.profile-image {
+  margin-bottom: 2rem;
+}
+
+.image {
+  width: 100%; /* Responsive width */
+  max-width: 400px; /* Maximum width */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(244, 242, 242, 0.2);
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image:hover {
+  transform: scale(1.1); /* Zoom in effect */
+  box-shadow: 0 8px 20px rgba(244, 242, 242, 0.5); /* Increase shadow on hover */
+}
+
+.about-title {
+  font-size: 2.5rem;
+  color: whitesmoke;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  font-family: 'Playfair Display', serif;
+  box-shadow: 0 4px 10px rgba(244, 242, 242, 0.2);
+  border-radius: 5px;
+}
+
+.about-description {
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+  color: whitesmoke;
+  font-family: 'Playfair Display', serif;
+  box-shadow: 0 4px 10px rgba(244, 242, 242, 0.2);
+  border-radius: 5px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.contact-button {
+  background: linear-gradient(to right, rgb(9, 6, 6), #282728);
+  box-shadow: 0 4px 10px rgba(244, 242, 242, 0.2);
+  color: white;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  font-family: 'Playfair Display', serif;
+}
+
+.contact-button:hover {
+  background: rgb(57, 54, 54);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* Stack items in a column for smaller screens */
+    align-items: center; /* Center align items */
+    padding: 2rem; /* Adjust padding */
+  }
+
+  .about-title {
+    font-size: 2rem; /* Adjust font size for smaller screens */
+  }
+
+  .about-description {
+    font-size: 1rem; /* Adjust font size for smaller screens */
+  }
+
+  .contact-button {
+    padding: 0.8rem 1.5rem; /* Adjust button padding */
+    font-size: 1rem; /* Adjust button font size */
+  }
+}
+
+@media (max-width: 480px) {
+  .about-title {
+    font-size: 1.5rem; /* Further adjust font size */
+  }
+
+  .about-description {
+    font-size: 0.9rem; /* Further adjust subtitle size */
+  }
+}

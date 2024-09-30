@@ -1,0 +1,147 @@
+.latest-section {
+  position: relative;
+  text-align: center;
+  padding: 5rem 2rem;
+  background-image: url("/assets/picture/bg3.jpg");
+  background-size: cover; /* Ensure background covers the section */
+  background-position: center; /* Center the background image */
+  color: whitesmoke;
+  min-height: 100vh; /* Ensure the section takes up at least the full viewport height */
+}
+
+.background-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7); /* Adjust opacity as needed */
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  z-index: 10;
+  flex-direction: row; /* Arrange children in a row */
+  align-items: center; /* Center align vertically */
+}
+
+.text-container {
+  flex: 1; /* Allow text container to grow */
+  max-width: 600px; /* Limit width for better readability */
+  padding: 1rem; /* Add padding for spacing */
+}
+
+.image-container {
+  margin: 1rem; /* Space around the image container */
+  flex: 1; /* Make image container flexible */
+  max-width: 400px; /* Maximum width for larger screens */
+  height: auto; /* Allow height to adjust */
+  overflow: hidden; /* Ensure any overflow is hidden */
+}
+
+.custom-image {
+  width: 100%; /* Full width of the container */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Cover the container without stretching */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(244, 242, 242, 0.2);
+}
+
+/* Keyframes for animations */
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes shuffle {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-10px);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  75% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 0.5s forwards; /* Fade-in effect */
+}
+
+.section-heading {
+  text-align: left; /* Align text to the left */
+  font-size: 2.5rem;
+  color: whitesmoke;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  font-family: 'Playfair Display', serif;
+  box-shadow: 0 4px 10px rgba(244, 242, 242, 0.2);
+  border-radius: 5px;
+}
+
+.section-paragraph {
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+  color: whitesmoke;
+  font-family: 'Playfair Display', serif;
+  padding-bottom: 20px;
+  box-shadow: 0 4px 10px rgba(244, 242, 242, 0.2);
+  border-radius: 5px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    align-items: center; /* Center align */
+  }
+
+  .section-heading {
+    font-size: 2.5rem; /* Adjust heading size for smaller screens */
+  }
+
+  .section-paragraph {
+    font-size: 1.5rem; /* Adjust paragraph size for smaller screens */
+  }
+
+  .image-container {
+    width: 90%; /* Make image container more flexible */
+    height: auto; /* Allow height to adjust */
+  }
+
+  .custom-image {
+    width: 100%; /* Responsive image width */
+    height: auto; /* Maintain aspect ratio */
+  }
+}
+
+@media (max-width: 480px) {
+  .section-heading {
+    font-size: 1.5rem; /* Further adjust heading size */
+  }
+
+  .section-paragraph {
+    font-size: 0.9rem; /* Further adjust paragraph size */
+  }
+}
